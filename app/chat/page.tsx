@@ -113,9 +113,9 @@ export default function ChatPage() {
           </div>
         </div>
 
-        {/* Composer fixed at bottom */}
-        <div className="sticky bottom-0 z-10 border-t border-white/10 bg-black/40 px-4 py-3 backdrop-blur">
-          <div className="mx-auto flex w-full max-w-3xl items-end gap-2">
+        {/* Composer fixed at bottom - wider and slightly elevated */}
+        <div className="sticky bottom-0 z-10 border-t border-white/10 bg-black/40 px-2 py-4 backdrop-blur">
+          <div className="mx-auto flex w-full max-w-4xl items-end gap-3">
             <textarea
               value={input}
               onChange={(e) => setInput(e.target.value)}
@@ -125,11 +125,11 @@ export default function ChatPage() {
                   ? `Message ClarifyAI (${selectedModelIds.length} model${selectedModelIds.length > 1 ? "s" : ""})`
                   : "Select at least one model to send"
               }
-              className="max-h-40 min-h-[44px] flex-1 resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder-zinc-400 outline-none focus:border-blue-500/60"
+              className="max-h-40 min-h-[48px] flex-1 resize-none rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-white placeholder-zinc-400 outline-none focus:border-blue-500/60 shadow-lg"
             />
             <button
               onClick={onSend}
-              className="glow rounded-2xl bg-[var(--accent)] px-4 py-3 text-sm font-semibold text-white hover:bg-blue-500/90"
+              className="glow rounded-2xl bg-[var(--accent)] px-5 py-4 text-sm font-semibold text-white hover:bg-blue-500/90 shadow-lg"
             >
               Send
             </button>
